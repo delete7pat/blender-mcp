@@ -54,6 +54,8 @@ The system consists of two main components:
 
 > **Personal note:** I had issues on Windows where Claude Desktop couldn't find `uv` even after adding it to PATH — restarting the machine (not just Claude) fixed it for me.
 
+> **Another note (for myself):** On Windows 11, I also had to run Claude Desktop as Administrator the first time to get the socket connection to work properly. Worth trying if you're stuck.
+
 ### Prerequisites
 
 - Blender 3.0 or newer
@@ -75,10 +77,5 @@ $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
 [Environment]::SetEnvironmentVariable("Path", "$userPath;$localBin", "User")
 ```
 
-Otherwise installation instructions are on their website: [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-
-**⚠️ Do not proceed before installing UV**
-
-### Environment Variables
-
-The following environment variables can be used to configure the Blend
+Otherwise installation instructions are on their website: [Install uv](https://docs.astral.sh/uv
+```
