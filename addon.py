@@ -44,6 +44,8 @@ class BlenderMCPServer:
         self.running = False
         self.socket = None
         self.server_thread = None
+        # Track connection count for debugging purposes
+        self.connection_count = 0
 
     def start(self):
         if self.running:
@@ -101,7 +103,5 @@ class BlenderMCPServer:
                 # Accept new connection
                 try:
                     client, address = self.socket.accept()
-                    print(f"Connected to client: {address}")
-
-                    # Handle client in a separate thread
-                    client_thread = thr
+                    self.connection_count += 1
+                    print(f"Connected to client: {address} (connection #{self.connection_count})")
