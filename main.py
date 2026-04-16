@@ -5,7 +5,12 @@ def main():
     """Entry point for the blender-mcp package"""
     # Print a quick startup message so I know the server is actually running
     print("Starting Blender MCP server...", file=sys.stderr)
-    server_main()
+    print("Press Ctrl+C to stop the server.", file=sys.stderr)
+    try:
+        server_main()
+    except KeyboardInterrupt:
+        print("\nServer stopped.", file=sys.stderr)
+        sys.exit(0)
 
 if __name__ == "__main__":
     main()
