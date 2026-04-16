@@ -104,16 +104,10 @@ Your data may be stored and processed in any country. By using Blender MCP, you 
 
 ### Your Content
 
-You retain ownership of any content you create using Blender MCP. Use of this tool does not transfer any intellectual property rights to the project maintainer.
+You retain ownership of any content you create using Blender MCP. Use of this tool does not transfer any rights to your work to the project maintainer.
 
 ---
 
-## 11. Changes to This Policy
+## 11. Personal Fork Notice
 
-I may update this document from time to time. Continued use of Blender MCP after changes constitutes acceptance of the updated terms.
-
----
-
-## 12. Personal Fork Notice
-
-> **Note (personal fork):** This is my personal fork of blender-mcp used for learning and experimentation. Telemetry is disabled by default in my build. The terms above reflect the upstream project's policy.
+> **Note (for this fork):** This is a personal fork used for learning and experimentation. Telemetry is disabled by default in my setup. No data is collected or transmitted from this fork.
