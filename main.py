@@ -11,6 +11,10 @@ def main():
     except KeyboardInterrupt:
         print("\nServer stopped.", file=sys.stderr)
         sys.exit(0)
+    except Exception as e:
+        # helpful to see the actual error instead of a silent crash
+        print(f"Server crashed: {e}", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
