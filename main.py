@@ -13,7 +13,9 @@ def main():
         sys.exit(0)
     except Exception as e:
         # helpful to see the actual error instead of a silent crash
+        import traceback
         print(f"Server crashed: {e}", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
         sys.exit(1)
 
 if __name__ == "__main__":
