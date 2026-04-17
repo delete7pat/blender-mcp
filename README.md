@@ -56,6 +56,8 @@ The system consists of two main components:
 
 > **Another note (for myself):** On Windows 11, I also had to run Claude Desktop as Administrator the first time to get the socket connection to work properly. Worth trying if you're stuck.
 
+> **One more thing I noticed:** If Blender freezes briefly when Claude sends a command, that's normal — it's executing Python on the main thread. Just wait it out, don't force-quit.
+
 ### Prerequisites
 
 - Blender 3.0 or newer
@@ -73,9 +75,5 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 and then add uv to the user path in Windows (you may need to restart Claude Desktop after):
 ```powershell
 $localBin = "$env:USERPROFILE\.local\bin"
-$userPath = [Environment]::GetEnvironmentVariable("Path", "User")
-[Environment]::SetEnvironmentVariable("Path", "$userPath;$localBin", "User")
-```
-
-Otherwise installation instructions are on their website: [Install uv](https://docs.astral.sh/uv
+$userPath = [Environment]::GetEnvironmentVariable("Pa
 ```
